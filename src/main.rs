@@ -1,12 +1,13 @@
-mod anyhow;
-mod thiserror;
-mod tracing;
+// mod anyhow;
+// mod thiserror;
+// mod tracing;
 // mod slog;
-mod itertools;
-mod polars;
+// mod itertools;
+// mod polars;
 // mod tokio;
-mod reqwest;
-mod axum;
+// mod reqwest;
+// mod axum;
+mod sqlx;
 
 #[tokio::main]
 async fn main() {
@@ -18,5 +19,6 @@ async fn main() {
     // polars::example();
     // tokio::example();
     // reqwest::example().await;
-    axum::example().await;
+    // axum::example().await;
+    sqlx::example().await;
 }

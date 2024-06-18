@@ -1,0 +1,8 @@
+version: '3'
+
+tasks:
+  build-db-image:
+    docker build -f ./db/Dockerfile -t postgres .
+  start-db:
+    cmds:
+      - docker run -p 5432:5432 -e POSTGRES_PASSWORD=password postgres
